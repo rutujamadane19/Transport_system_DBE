@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Transport Data</title>
+    <style>
+        table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+    </style>
+  </head>
+  <body>
+    <h1>Transport Data</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Start Location</th>
+          <th>Destination Location</th>
+          <th>Departing Time</th>
+          <th>Returning Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% data.forEach(function(item) { %>
+          <tr>
+            <td><%= item.name %></td>
+            <td><%= item.email %></td>
+            <td><%= item.phone %></td>
+            <td><%= item.startloc %></td>
+            <td><%= item.destloc %></td>
+            <td><%= item.depart %></td>
+            <td><%= item.return %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </body>
+</html>
